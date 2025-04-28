@@ -1,24 +1,35 @@
 # Formatando SSD
 
-Sim, a aplicação das técnicas de formatação e particionamento adequadas pode ter um impacto positivo na performance e na vida útil de um SSD (Solid State Drive). Vejamos como isso pode acontecer com base nas práticas que você está aplicando e nos detalhes das operações de formatação e particionamento:
+Aqui eu decidi implementar tecnicas de formatação bem especificas voltando mais para a modularidade de partições do que para um monolito padrão como feito no sistema tradicional.
 
-#### 1. **Uso de Partições Separadas (como `root`, `home`, `swap`, etc.)**
+O objetivo aqui é basicamente otimizar a vida util do meu SSD fazendo um ritual usando as tecnologias mais recentes de forma inteligente e otimizada para cada partição e seu propóstio, mas em resumo, o que apliquei foi:
 
-**Vantagens:**
+#### 1. Uso de Partições Separadas (como  **`root`, `home`, `swap`, etc.)**
 
-* **Desempenho melhorado**: Ao separar as partições, você pode otimizar a utilização de diferentes áreas do SSD para tipos de dados específicos. Por exemplo, ao colocar o diretório `home` (onde ficam os arquivos do usuário) em uma partição separada da partição raiz (`/`), o sistema pode acessar essas áreas de forma mais eficiente, aproveitando melhor a estrutura interna de armazenamento do SSD.
-* **Menor fragmentação**: SSDs não sofrem a mesma degradação de desempenho que os HDs tradicionais devido à fragmentação de arquivos. No entanto, a separação das partições permite organizar melhor os dados e evitar que a partição raiz fique excessivamente cheia, o que pode impactar o desempenho. Se a partição raiz (onde o sistema operacional e os arquivos de configuração ficam) estiver cheia, o SSD pode ter que mover dados para "blocos" menos eficientes, o que afeta o desempenho.
+* Ao separar as partições, você pode otimizar a utilização de diferentes áreas do SSD para tipos de dados específicos.&#x20;
+
+> Por exemplo, ao colocar o diretório `home` em uma partição separada da partição `/`, pode evitar a mistura de blocos de memória e a fragmentação de setores inteiros, implementando essa heuristica.
+
+* A separação das partições permite organizar melhor os dados e evitar que a partição raiz fique excessivamente cheia.&#x20;
+* Se a partição raiz (onde o sistema operacional e os arquivos de configuração ficam) estiver cheia, o SSD pode ter que mover dados para "blocos" menos eficientes afetando o desempenho.
 
 #### 2. **Utilização de Btrfs e Ext4**
 
 **Btrfs:**
 
-* **Desempenho e Resiliência**: O Btrfs é um sistema de arquivos moderno que oferece características como cópias em gravação (copy-on-write), snapshots, compressão de dados, e deduplicação. Essas características podem aumentar a eficiência de armazenamento e melhorar a resiliência do sistema. Para SSDs, o uso de Btrfs pode otimizar o gerenciamento de espaço livre e reduzir a fragmentação, o que pode ajudar na manutenção do desempenho ao longo do tempo.
-* **Gerenciamento de espaço eficiente**: O Btrfs lida de forma mais eficiente com a maneira como os dados são gravados e apagados no SSD, minimizando o desgaste de células de memória flash (que é uma das principais causas de desgaste em SSDs). O "garbage collection" (coleta de lixo) do Btrfs ajuda a otimizar o uso do espaço e prolonga a vida útil do SSD.
+* O Btrfs(B-tree File System) é um sistema de arquivos moderno que oferece características como cópias em gravação (copy-on-write), snapshots, compressão de dados, e deduplicação.&#x20;
+* Essas características podem aumentar a eficiência de armazenamento e melhorar a resiliência do sistema.&#x20;
+*   Para SSDs, o uso de Btrfs pode otimizar o gerenciamento de espaço livre e reduzir a fragmentação, o que pode ajudar na manutenção do desempenho ao longo do tempo.
+
+    > Ou seja, apesar de ter apenas 220GB reais, o meu desempenho pode equivaler a 300GB virtualizados!
+* O Btrfs lida de forma mais eficiente com a maneira como os dados são gravados e apagados no SSD, minimizando o desgaste de células de memória flash.&#x20;
+* Esse sistema implementa um "garbage collection" que otimiza o uso do espaço e prolonga a vida útil do SSD evitando buscas desnecessárias e desgaste excessivo.
 
 **Ext4:**
 
-* **Estabilidade e Compatibilidade**: O Ext4, por outro lado, é um sistema de arquivos mais simples, mas extremamente estável e amplamente compatível. Embora não ofereça os recursos avançados do Btrfs, ele ainda é uma excelente escolha para partições de sistema que não exigem tanta flexibilidade. No caso de SSDs, o Ext4 também tem suporte a TRIM, que é fundamental para a manutenção do desempenho e da vida útil do dispositivo.
+* O Ext4, por outro lado, é um sistema de arquivos mais simples, mas extremamente estável e amplamente compatível.&#x20;
+* Embora não ofereça os recursos avançados do Btrfs, ele ainda é uma excelente escolha para partições de sistema que não exigem tanta flexibilidade.&#x20;
+* O Ext4 também tem suporte a TRIM, que é fundamental para a manutenção do desempenho e da vida útil do dispositivo.
 
 #### 3. **Uso do comando TRIM**
 
