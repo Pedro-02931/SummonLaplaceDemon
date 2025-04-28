@@ -5,7 +5,8 @@
 
 ## DIARIO
 
-* [Exportando o equivalente a minha alma](diario/exportando-o-equivalente-a-minha-alma.md)
+* [Exportando o equivalente a minha alma](diario/exportando-o-equivalente-a-minha-alma/README.md)
+  * [Formatando SSD](diario/exportando-o-equivalente-a-minha-alma/formatando-ssd.md)
 
 ## Technologys
 

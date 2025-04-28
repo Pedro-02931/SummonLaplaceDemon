@@ -1,6 +1,6 @@
 ---
 icon: infinity
-cover: ../.gitbook/assets/4a1b25f3-d526-46df-a585-88cf882cb758.png
+cover: ../../.gitbook/assets/4a1b25f3-d526-46df-a585-88cf882cb758.png
 coverY: 0
 ---
 
