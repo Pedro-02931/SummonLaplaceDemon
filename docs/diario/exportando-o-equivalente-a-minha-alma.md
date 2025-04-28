@@ -1,3 +1,9 @@
+---
+icon: infinity
+cover: ../.gitbook/assets/4a1b25f3-d526-46df-a585-88cf882cb758.png
+coverY: 0
+---
+
 # Exportando o equivalente a minha alma
 
 Bom, dado que por algum motivo cósmico tenho a tendência de ficar documentando o óbvio e 50 páginas de coisas inúteis por dia usando LLM, decidi que, porque sim, vou otimizar ao máximo minha carroça remendada, onde agora, seguindo um milestone que projetei testando otimizações, vou otimizar tanto o meu notebook que ele valerá como NFT 3 BitCoins em 2030 quando eu migrar para um container docker.
