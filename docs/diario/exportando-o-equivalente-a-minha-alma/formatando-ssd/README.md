@@ -1,3 +1,7 @@
+---
+icon: hard-drive
+---
+
 # Formatando SSD
 
 Aqui eu decidi implementar tecnicas de formatação bem especificas voltando mais para a modularidade de partições do que para um monolito padrão como feito no sistema tradicional.

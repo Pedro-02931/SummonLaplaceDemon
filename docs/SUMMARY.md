@@ -7,6 +7,8 @@
 
 * [Exportando o equivalente a minha alma](diario/exportando-o-equivalente-a-minha-alma/README.md)
   * [Formatando SSD](diario/exportando-o-equivalente-a-minha-alma/formatando-ssd/README.md)
+    * [Alias Uteis](diario/exportando-o-equivalente-a-minha-alma/formatando-ssd/alias-uteis/README.md)
+      * [alias zero](diario/exportando-o-equivalente-a-minha-alma/formatando-ssd/alias-uteis/alias-zero.md)
     * [Uso de Partições Separadas (como  root, home, swap, etc.)](diario/exportando-o-equivalente-a-minha-alma/formatando-ssd/uso-de-particoes-separadas-como-root-home-swap-etc..md)
     * [Alinhamento de Partições](diario/exportando-o-equivalente-a-minha-alma/formatando-ssd/alinhamento-de-particoes.md)
     * [Utilização de Btrfs e Ext4](diario/exportando-o-equivalente-a-minha-alma/formatando-ssd/utilizacao-de-btrfs-e-ext4.md)
