@@ -1,3 +1,7 @@
+---
+icon: '1'
+---
+
 # Uso de Partições Separadas (como  root, home, swap, etc.)
 
 * Ao separar as partições, você pode otimizar a utilização de diferentes áreas do SSD para tipos de dados específicos.&#x20;

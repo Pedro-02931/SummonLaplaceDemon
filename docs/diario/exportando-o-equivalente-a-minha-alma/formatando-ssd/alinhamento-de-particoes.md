@@ -1,3 +1,7 @@
+---
+icon: '2'
+---
+
 # Alinhamento de Partições
 
 * Partições mal alinhadas podem causar um aumento nas operações de leitura e escrita, o que diminui o desempenho e pode aumentar o desgaste do SSD.&#x20;
