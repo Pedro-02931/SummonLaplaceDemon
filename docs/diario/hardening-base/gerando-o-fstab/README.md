@@ -1,3 +1,7 @@
+---
+icon: hard-drive
+---
+
 # Gerando o fstab
 
 | **Aspecto**                        | **Método Tradicional**                                           | **Seu Método**                                                                                                                                                    |

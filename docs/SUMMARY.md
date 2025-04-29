@@ -5,14 +5,17 @@
 
 ## DIARIO
 
-* [Exportando o equivalente a minha alma](diario/exportando-o-equivalente-a-minha-alma/README.md)
-  * [Formatando SSD](diario/exportando-o-equivalente-a-minha-alma/formatando-ssd/README.md)
-    * [Alias Uteis](diario/exportando-o-equivalente-a-minha-alma/formatando-ssd/alias-uteis/README.md)
-      * [alias zero](diario/exportando-o-equivalente-a-minha-alma/formatando-ssd/alias-uteis/alias-zero.md)
-    * [Uso de Partições Separadas (como  root, home, swap, etc.)](diario/exportando-o-equivalente-a-minha-alma/formatando-ssd/uso-de-particoes-separadas-como-root-home-swap-etc..md)
-    * [Alinhamento de Partições](diario/exportando-o-equivalente-a-minha-alma/formatando-ssd/alinhamento-de-particoes.md)
-    * [Utilização de Btrfs e Ext4](diario/exportando-o-equivalente-a-minha-alma/formatando-ssd/utilizacao-de-btrfs-e-ext4.md)
-  * [Gerando o fstab](diario/exportando-o-equivalente-a-minha-alma/gerando-o-fstab.md)
+* [Hardening Base](diario/hardening-base/README.md)
+  * [Formatando SSD](diario/hardening-base/formatando-ssd/README.md)
+    * [Alias Uteis](diario/hardening-base/formatando-ssd/alias-uteis/README.md)
+      * [zeroDisk](diario/hardening-base/formatando-ssd/alias-uteis/zerodisk.md)
+    * [Uso de Partições Separadas (como  root, home, swap, etc.)](diario/hardening-base/formatando-ssd/uso-de-particoes-separadas-como-root-home-swap-etc..md)
+    * [Alinhamento de Partições](diario/hardening-base/formatando-ssd/alinhamento-de-particoes.md)
+    * [Utilização de Btrfs e Ext4](diario/hardening-base/formatando-ssd/utilizacao-de-btrfs-e-ext4.md)
+  * [Gerando o fstab](diario/hardening-base/gerando-o-fstab/README.md)
+    * [Alias Uteis](diario/hardening-base/gerando-o-fstab/alias-uteis/README.md)
+      * [createFunction](diario/hardening-base/gerando-o-fstab/alias-uteis/createfunction.md)
+      * [editFuncion](diario/hardening-base/gerando-o-fstab/alias-uteis/editfuncion.md)
 
 ## Technologys
 

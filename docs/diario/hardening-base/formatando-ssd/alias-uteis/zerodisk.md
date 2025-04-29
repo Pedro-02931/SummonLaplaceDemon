@@ -1,7 +1,7 @@
-# alias zero
+# zeroDisk
 
 ```bash
-alias zero='
+alias zeroDisk='
     read DISK;
     sudo wipefs -a "$DISK";
     sudo sgdisk --zap-all "$DISK";
