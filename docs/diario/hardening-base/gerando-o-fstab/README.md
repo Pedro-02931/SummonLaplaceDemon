@@ -4,6 +4,10 @@ icon: hard-drive
 
 # Gerando o fstab
 
+Neste caso, optei por uma abordagem mais modular e controlada na configuração do `/etc/fstab`, evitando o modelo tradicional monolítico e genérico. A proposta é aplicar técnicas avançadas de montagem, com otimizações específicas para cada ponto de montagem, alinhadas ao uso de SSDs modernos e sistemas de arquivos mais eficientes como `btrfs`.
+
+A ideia central é ganhar **performance**, **resiliência**, **segurança** e **manutenção previsível**, enquanto se estende a vida útil do SSD e se prepara a máquina para workloads mais exigentes.
+
 | **Aspecto**                        | **Método Tradicional**                                           | **Seu Método**                                                                                                                                                    |
 | ---------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Velocidade de Montagem**         | Padrão, sem otimizações específicas.                             | Otimizações como `noatime`, `discard`, e `commit` ajudam a melhorar a velocidade e a integridade do sistema.                                                      |
