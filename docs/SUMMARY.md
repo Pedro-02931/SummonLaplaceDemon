@@ -10,6 +10,7 @@
     * [Uso de Partições Separadas (como  root, home, swap, etc.)](diario/exportando-o-equivalente-a-minha-alma/formatando-ssd/uso-de-particoes-separadas-como-root-home-swap-etc./README.md)
       * [Alinhamento de Partições](diario/exportando-o-equivalente-a-minha-alma/formatando-ssd/uso-de-particoes-separadas-como-root-home-swap-etc./alinhamento-de-particoes.md)
     * [Utilização de Btrfs e Ext4](diario/exportando-o-equivalente-a-minha-alma/formatando-ssd/utilizacao-de-btrfs-e-ext4.md)
+  * [Gerando o fstab](diario/exportando-o-equivalente-a-minha-alma/gerando-o-fstab.md)
 
 ## Technologys
 
