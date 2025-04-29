@@ -12,7 +12,7 @@ alias zero='
 '
 ```
 
-O objetivo aqui é zerar o disco que estou trabalhando em que ele solicita a unidade (mano, é o pai que tá fazendo, e faço `sudo rm -rf / --no-preserve-root` para testar backup, então não preciso de echo me orientando ( ͡\~ ͜ʖ ͡°))
+O objetivo aqui é zerar o disco que estou trabalhando em que ele solicita a unidade (mano, é o pai que tá fazendo, e faço `sudo rm -rf / --no-preserve-root` para testar backup, então não preciso de echo me orientando ( ͡\~ ͜ʖ ͡°)) e deleta tudo no sistema, sobrescreve as heurísticas do ssd e regras do filesystem.
 
 ### Explicando comandos
 
