@@ -16,6 +16,15 @@
     * [Alias Uteis](diario/hardening-base/gerando-o-fstab/alias-uteis/README.md)
       * [createFunction](diario/hardening-base/gerando-o-fstab/alias-uteis/createfunction.md)
       * [editFuncion](diario/hardening-base/gerando-o-fstab/alias-uteis/editfuncion.md)
+    * [Automatizando Criação](diario/hardening-base/gerando-o-fstab/automatizando-criacao.md)
+    * [Heurísticas Aplicadas](diario/hardening-base/gerando-o-fstab/heuristicas-aplicadas/README.md)
+      * [/ → Partição raiz (btrfs)](diario/hardening-base/gerando-o-fstab/heuristicas-aplicadas/particao-raiz-btrfs.md)
+      * [/boot/efi → UEFI Partition (vfat)](diario/hardening-base/gerando-o-fstab/heuristicas-aplicadas/boot-efi-uefi-partition-vfat.md)
+      * [/boot → Kernel/Initramfs (ext4)](diario/hardening-base/gerando-o-fstab/heuristicas-aplicadas/boot-kernel-initramfs-ext4.md)
+      * [/home → Dados do usuário (btrfs)](diario/hardening-base/gerando-o-fstab/heuristicas-aplicadas/home-dados-do-usuario-btrfs.md)
+      * [/usr → Binários e libs do sistema (ext4)](diario/hardening-base/gerando-o-fstab/heuristicas-aplicadas/usr-binarios-e-libs-do-sistema-ext4.md)
+      * [/var → Dados variáveis (log, cache, pacotes) (ext4)](diario/hardening-base/gerando-o-fstab/heuristicas-aplicadas/var-dados-variaveis-log-cache-pacotes-ext4.md)
+      * [/tmp → Temporários (ext4)](diario/hardening-base/gerando-o-fstab/heuristicas-aplicadas/tmp-temporarios-ext4.md)
 
 ## Technologys
 
