@@ -25,6 +25,9 @@
       * [/usr → Binários e libs do sistema (ext4)](diario/hardening-base/gerando-o-fstab/heuristicas-aplicadas/usr-binarios-e-libs-do-sistema-ext4.md)
       * [/var → Dados variáveis (log, cache, pacotes) (ext4)](diario/hardening-base/gerando-o-fstab/heuristicas-aplicadas/var-dados-variaveis-log-cache-pacotes-ext4.md)
       * [/tmp → Temporários (ext4)](diario/hardening-base/gerando-o-fstab/heuristicas-aplicadas/tmp-temporarios-ext4.md)
+* [AI Base](diario/ai-base/README.md)
+  * [Instalando e Otimizando ao Máximo o Python](diario/ai-base/instalando-e-otimizando-ao-maximo-o-python/README.md)
+    * [Alias Uteis](diario/ai-base/instalando-e-otimizando-ao-maximo-o-python/alias-uteis.md)
 
 ## Technologys
 
