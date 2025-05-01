@@ -2,6 +2,7 @@
 
 ```
 alias createFunction='
+mkdir -p /tmp/fnt/
 FUNCTION="/tmp/fnt/fn.sh"
 rm -f $FUNCTION
 nano $FUNCTION
