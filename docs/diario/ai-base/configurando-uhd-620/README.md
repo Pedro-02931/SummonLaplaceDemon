@@ -126,7 +126,112 @@ echo '{"file_format_version":"1.0.0","ICD":{"library_path":"/usr/lib/x86_64-linu
 # 5. Atualizar configuração do driver i915
 echo "options i915 enable_guc=2 enable_fbc=1 enable_psr=0" | sudo tee /etc/modprobe.d/i915.conf
 sudo update-initramfs -u
+echo "deb http://security.debian.org/debian-security bookworm-security main" | sudo tee -a /etc/apt/sources.list
+sudo apt update
+sudo nano /etc/tlp.conf
+# Ativar recomendações pós-instalação
+sudo apt install -y \
+  tlp-rdw \
+  smartmontools \
+  powertop
 
+# Configurar parâmetros de energia
+sudo tee -a /etc/tlp.conf <<EOF
+CPU_SCALING_GOVERNOR_ON_AC=performance
+CPU_SCALING_GOVERNOR_ON_BAT=powersave
+ENERGY_PERF_POLICY_ON_AC=performance
+EOF
 
+# Aplicar configurações
+sudo tlp start
+# 1. Habilitar repositórios necessários
+sudo sed -i 's/main/main contrib non-free non-free-firmware/' /etc/apt/sources.list
+sudo apt update
+
+# 2. Instalar dependências essenciais manualmente
+sudo apt install -y \
+  hdparm \
+  rfkill \
+  usbutils \
+  ethtool \
+  network-manager
+
+# 3. Instalar TLP com recomendações opcionais
+sudo apt install -y --no-install-recommends tlp
+
+# 4. Configurar e iniciar o TLP
+sudo systemctl enable tlp
+sudo systemctl start tlp
+
+# 5. Verificar status
+sudo tlp-stat -s
+ sudo apt install -y     vulkan-tools   intel-gpu-tools   mesa-utils   libvulkan1   libva-wayland2   libva-drm2
+ 
+ sudo apt install initramfs-tools -y
+sudo update-initramfs -u
+ 
+ 
+ #!/bin/bash
+
+# 1. Criar script de monitoramento condicional
+sudo tee /usr/local/bin/intel_gpu_vscode_tuner.sh >/dev/null <<'EOF'
+#!/bin/bash
+
+# Valores padrão de segurança
+DEFAULT_GPU_FREQ=$(cat /sys/class/drm/card0/gt_max_freq_mhz | awk '{print $1}')
+DEFAULT_RC6=$(cat /sys/module/i915/parameters/enable_rc6)
+DEFAULT_RC6_MASK=$(cat /sys/module/i915/parameters/enable_rc6_mask)
+
+# Função para aplicar perfomance máxima
+apply_perf_profile() {
+    echo "manual" > /sys/class/drm/card0/power_dpm_force_performance_level
+    echo 1050 > /sys/class/drm/card0/gt_max_freq_mhz
+    echo 1 > /sys/module/i915/parameters/enable_rc6
+    echo 8 > /sys/module/i915/parameters/enable_rc6_mask
+}
+
+# Função para restaurar padrões
+restore_defaults() {
+    echo "auto" > /sys/class/drm/card0/power_dpm_force_performance_level
+    echo $DEFAULT_GPU_FREQ > /sys/class/drm/card0/gt_max_freq_mhz
+    echo $DEFAULT_RC6 > /sys/module/i915/parameters/enable_rc6
+    echo $DEFAULT_RC6_MASK > /sys/module/i915/parameters/enable_rc6_mask
+}
+
+# Loop principal de monitoramento
+while true; do
+    if pgrep -x "code" >/dev/null; then
+        apply_perf_profile
+        while pgrep -x "code" >/dev/null; do
+            sleep 10
+        done
+        restore_defaults
+    fi
+    sleep 5
+done
+EOF
+
+# 2. Criar serviço systemd
+sudo tee /etc/systemd/system/intel-gpu-vscode-tuner.service >/dev/null <<EOF
+[Unit]
+Description=Dynamic Intel GPU Tuning for VS Code
+After=graphical.target
+
+[Service]
+ExecStart=/usr/local/bin/intel_gpu_vscode_tuner.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# 3. Configurar permissões e iniciar serviço
+sudo chmod +x /usr/local/bin/intel_gpu_vscode_tuner.sh
+sudo systemctl daemon-reload
+sudo systemctl enable --now intel-gpu-vscode-tuner.service
+
+# 4. Verificar status
+systemctl status intel-gpu-vscode-tuner.service --no-pager
 ```
 {% endcode %}
