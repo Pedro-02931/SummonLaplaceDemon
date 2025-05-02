@@ -25,12 +25,18 @@
       * [/usr → Binários e libs do sistema (ext4)](diario/hardening-base/gerando-o-fstab/heuristicas-aplicadas/usr-binarios-e-libs-do-sistema-ext4.md)
       * [/var → Dados variáveis (log, cache, pacotes) (ext4)](diario/hardening-base/gerando-o-fstab/heuristicas-aplicadas/var-dados-variaveis-log-cache-pacotes-ext4.md)
       * [/tmp → Temporários (ext4)](diario/hardening-base/gerando-o-fstab/heuristicas-aplicadas/tmp-temporarios-ext4.md)
+  * [Drivers de Video](diario/hardening-base/drivers-de-video/README.md)
+    * [Alias Uteis](diario/hardening-base/drivers-de-video/alias-uteis/README.md)
+      * [gpuScanner](diario/hardening-base/drivers-de-video/alias-uteis/gpuscanner.md)
+    * [PSR, RC6(Sou Pobre e Intel Me Odeia) e GuC](diario/hardening-base/drivers-de-video/psr-rc6-sou-pobre-e-intel-me-odeia-e-guc/README.md)
+      * [O Que Planejo Ganhar](diario/hardening-base/drivers-de-video/psr-rc6-sou-pobre-e-intel-me-odeia-e-guc/o-que-planejo-ganhar.md)
+      * [Primeira Camada](diario/hardening-base/drivers-de-video/psr-rc6-sou-pobre-e-intel-me-odeia-e-guc/primeira-camada.md)
+      * [Segunda Camada](diario/hardening-base/drivers-de-video/psr-rc6-sou-pobre-e-intel-me-odeia-e-guc/segunda-camada.md)
+    * [Page 3](diario/hardening-base/drivers-de-video/page-3.md)
 * [AI Base](diario/ai-base/README.md)
   * [Instalando e Otimizando ao Máximo do VS CODE para IA](diario/ai-base/instalando-e-otimizando-ao-maximo-do-vs-code-para-ia/README.md)
     * [Alias Uteis](diario/ai-base/instalando-e-otimizando-ao-maximo-do-vs-code-para-ia/alias-uteis.md)
     * [Page 2](diario/ai-base/instalando-e-otimizando-ao-maximo-do-vs-code-para-ia/page-2.md)
-  * [CONFIGURANDO UHD 620](diario/ai-base/configurando-uhd-620/README.md)
-    * [Page 3](diario/ai-base/configurando-uhd-620/page-3.md)
 
 ## Technologys
 
