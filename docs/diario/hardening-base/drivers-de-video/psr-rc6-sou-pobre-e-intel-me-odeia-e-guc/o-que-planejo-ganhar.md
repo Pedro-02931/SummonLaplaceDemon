@@ -1,13 +1,17 @@
 # O Que Planejo Ganhar
 
-**Cenário Ideal (Se Tudo Funcionar):**
+Apesar do meu note ser um pato manco, decidi tentar extender a vida util dele habilitando configurações e flags em 2 camadas(grub e sysfs), e segue os ganhos esperados
 
-* **Desempenho**: +5% a 10% em jogos/encoding (se subir o clock).
-* **Energia**: +20% a 30% de consumo (vai esquentar pra caralho).
-* **Vida Útil**: Se fizer merda, **reduce a vida da GPU em 1-3 anos**.
+***
 
-**Cenário Real (Com Sua UHD 620):**
+### 📊 **Resumo de Ganhos por Configuração**
 
-* **Desempenho**: **+0% a 3%** (Intel travou essa merda).
-* **Energia**: **Vai gastar mais pra zero ganho**.
-* **Conclusão**: **Não vale a pena, seu note já é um pato manco**.
+| Ajuste                      | Ganho estimado de bateria | Impacto na performance | Explicação prática                                                                                              |
+| --------------------------- | ------------------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `enable_psr=1`              | ↑ até 10%                 | Nenhum                 | PSR (Panel Self Refresh) reduz o uso da GPU quando a tela está parada.                                          |
+| `enable_rc6=1`              | ↑ até 10–15%              | Nenhum                 | RC6 coloca a GPU em estados de sono profundo. Quanto mais agressivo o RC6 (6, 6p, 6pp), mais energia economiza. |
+| `enable_fbc=1`              | ↑ até 3–5%                | Nenhum                 | Frame Buffer Compression reduz o tráfego entre GPU e RAM.                                                       |
+| `enable_guc=2`              | ↑ pequeno (\~2%)          | Leve melhoria          | Move agendamento de tarefas da CPU para o GuC (Graphics µController), melhora eficiência.                       |
+| `enable_dc=4` (via GRUB)    | ↑ até 5–7%                | Pode causar flickers   | Deep C-states (DC) desligam partes do pipeline de vídeo em idle.                                                |
+| `disable_power_well=0`      | ↑ marginal (\~1–2%)       | Nenhum                 | Mantém blocos desnecessários desligados.                                                                        |
+| `gt_min/max_freq_mhz` limit | ↑ variável (5–10%)        | Reduz desempenho pico  | Força a GPU a usar menos frequência, poupando energia em tarefas leves.                                         |
