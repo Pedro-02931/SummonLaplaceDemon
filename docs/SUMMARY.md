@@ -29,6 +29,7 @@
   * [Instalando e Otimizando ao Máximo do VS CODE para IA](diario/ai-base/instalando-e-otimizando-ao-maximo-do-vs-code-para-ia/README.md)
     * [Alias Uteis](diario/ai-base/instalando-e-otimizando-ao-maximo-do-vs-code-para-ia/alias-uteis.md)
     * [Page 2](diario/ai-base/instalando-e-otimizando-ao-maximo-do-vs-code-para-ia/page-2.md)
+  * [CONFIGURANDO UHD 620](diario/ai-base/configurando-uhd-620.md)
 
 ## Technologys
 
