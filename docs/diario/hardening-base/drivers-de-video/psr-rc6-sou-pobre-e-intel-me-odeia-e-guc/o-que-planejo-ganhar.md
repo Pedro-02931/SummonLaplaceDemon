@@ -6,12 +6,18 @@ Apesar do meu note ser um pato manco, decidi tentar extender a vida util dele ha
 
 ### 📊 **Resumo de Ganhos por Configuração**
 
-| Ajuste                      | Ganho estimado de bateria | Impacto na performance | Explicação prática                                                                                              |
-| --------------------------- | ------------------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `enable_psr=1`              | ↑ até 10%                 | Nenhum                 | PSR (Panel Self Refresh) reduz o uso da GPU quando a tela está parada.                                          |
-| `enable_rc6=1`              | ↑ até 10–15%              | Nenhum                 | RC6 coloca a GPU em estados de sono profundo. Quanto mais agressivo o RC6 (6, 6p, 6pp), mais energia economiza. |
-| `enable_fbc=1`              | ↑ até 3–5%                | Nenhum                 | Frame Buffer Compression reduz o tráfego entre GPU e RAM.                                                       |
-| `enable_guc=2`              | ↑ pequeno (\~2%)          | Leve melhoria          | Move agendamento de tarefas da CPU para o GuC (Graphics µController), melhora eficiência.                       |
-| `enable_dc=4` (via GRUB)    | ↑ até 5–7%                | Pode causar flickers   | Deep C-states (DC) desligam partes do pipeline de vídeo em idle.                                                |
-| `disable_power_well=0`      | ↑ marginal (\~1–2%)       | Nenhum                 | Mantém blocos desnecessários desligados.                                                                        |
-| `gt_min/max_freq_mhz` limit | ↑ variável (5–10%)        | Reduz desempenho pico  | Força a GPU a usar menos frequência, poupando energia em tarefas leves.                                         |
+| Recurso Ativado             | Impacto na Bateria (%) | Impacto na Saúde Térmica (%) | Observações Técnicas                                                   |
+| --------------------------- | ---------------------- | ---------------------------- | ---------------------------------------------------------------------- |
+| `enable_psr=1`              | +5–8%                  | +3–5%                        | Tela não redesenha se conteúdo estiver parado (_Panel Self Refresh_)   |
+| `enable_rc6=1`              | +8–15%                 | +10%                         | GPU entra em estados de sono profundo (RC6, RC6p, RC6pp)               |
+| `enable_guc=2`              | +1–3%                  | +1%                          | Offload de gerenciamento de energia pro GuC (Graphics microcontroller) |
+| `enable_fbc=1`              | +4–6%                  | +3%                          | Comprime quadros idênticos na VRAM para economizar energia             |
+| `gt_max_freq_mhz=800`       | +7–12%                 | +6–10%                       | Reduz o pico de consumo da GPU evitando uso de _Turbo Boost_           |
+| `gt_min_freq_mhz=300`       | —                      | —                            | Mantém o consumo ocioso mínimo padrão                                  |
+| `i915.enable_dc=4`          | +2–4%                  | +2%                          | Deep power states para componentes gráficos                            |
+| `i915.disable_power_well=0` | +1–2%                  | +1%                          | Mantém domínios de energia desligados quando não utilizados            |
+
+| Categoria                   | Ganho Potencial (%) |
+| --------------------------- | ------------------- |
+| **Bateria (consumo menor)** | **+15% a +35%**     |
+| **Temperatura/saúde geral** | **+10% a +25%**     |
