@@ -1,3 +1,7 @@
+---
+description: GNU GENERAL PUBLIC LICENSE                        Version 3, 29 June 2007
+---
+
 # Intrudução
 
 Bom, o objetivo desse projeto é uma atividade para o rastreio e garantia de qualidade de carga refrigerada entre sistemas alimentícios.&#x20;

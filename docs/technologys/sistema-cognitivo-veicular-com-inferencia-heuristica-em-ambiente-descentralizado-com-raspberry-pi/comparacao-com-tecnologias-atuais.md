@@ -1,3 +1,7 @@
+---
+description: GNU GENERAL PUBLIC LICENSE                        Version 3, 29 June 2007
+---
+
 # Comparação com Tecnologias Atuais
 
 | **Tecnologia**       | **Computação**           | **Conectividade**    | **Custo** | **Latência** | **Robustez Offline** |

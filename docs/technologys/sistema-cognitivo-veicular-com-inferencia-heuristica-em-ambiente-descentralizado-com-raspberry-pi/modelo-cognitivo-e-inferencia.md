@@ -1,3 +1,7 @@
+---
+description: GNU GENERAL PUBLIC LICENSE                        Version 3, 29 June 2007
+---
+
 # Modelo Cognitivo e Inferência
 
 ### **3.1 Representação Matemática e Lógica de Transição**

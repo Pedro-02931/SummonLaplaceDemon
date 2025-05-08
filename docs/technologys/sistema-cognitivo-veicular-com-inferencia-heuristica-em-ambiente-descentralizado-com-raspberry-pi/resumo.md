@@ -1,3 +1,7 @@
+---
+description: GNU GENERAL PUBLIC LICENSE                        Version 3, 29 June 2007
+---
+
 # Resumo
 
 Este artigo apresenta uma arquitetura de inferência cognitiva embarcada para caminhões, minimalista e eficiente, utilizando heurísticas de estados baseadas em observação e transições de magnitude, acionadas pela leitura de QR Codes físicos.&#x20;

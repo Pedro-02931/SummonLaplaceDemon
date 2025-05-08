@@ -1,3 +1,7 @@
+---
+description: GNU GENERAL PUBLIC LICENSE                        Version 3, 29 June 2007
+---
+
 # Arquitetura Física e Lógica
 
 ### 2.1 Componentes de Hardware e Mapea:
